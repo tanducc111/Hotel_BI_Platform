@@ -1,0 +1,4 @@
+source_system,source_row_number,validation_errors,booking_id,customer_name,room_type,check_in,check_out,room_price
+bookings,4,missing_customer_name,3,,Suite,2025-01-10,2025-01-12,200
+bookings,5,check_out_earlier_than_check_in,4,Le Van C,Standard,2025-01-15,2025-01-12,100
+bookings,6,negative_revenue,5,Le Van D,Standard,2025-01-15,2025-01-18,-50

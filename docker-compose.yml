@@ -1,0 +1,21 @@
+services:
+  postgres:
+    image: postgres:16
+    container_name: hotel_dw_postgres
+    environment:
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: admin
+      POSTGRES_DB: hotel_dw
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./database/create_tables.sql:/docker-entrypoint-initdb.d/01_create_tables.sql:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U admin -d hotel_dw"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+volumes:
+  postgres_data:

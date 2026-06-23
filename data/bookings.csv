@@ -1,0 +1,6 @@
+booking_id,customer_name,room_type,check_in,check_out,room_price
+1,Nguyen Van A,Deluxe,2025-01-01,2025-01-03,150
+2,Tran Thi B,Suite,2025-01-02,2025-01-05,300
+3,,Suite,2025-01-10,2025-01-12,200
+4,Le Van C,Standard,2025-01-15,2025-01-12,100
+5,Le Van D,Standard,2025-01-15,2025-01-18,-50
